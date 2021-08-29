@@ -5,7 +5,7 @@ const Header = () => {
 		<Navbar bg="dark" variant="dark">
     <Container>
     <Navbar.Brand>
-    <a> Shopping Cart </a>
+    <a href="/"> Shopping Cart </a>
     </Navbar.Brand>
     <Navbar.Text className="search">
     <FormControl style={{widht : 500}} placeHolder='search a product'/>
