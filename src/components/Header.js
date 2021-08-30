@@ -10,7 +10,7 @@ const Header = () => {
     <Link to="/"> Shopping Cart </Link>
     </Navbar.Brand>
     <Navbar.Text className="search">  
-    <FormControl placeHolder='search a product'/>
+    <FormControl placeholder='search a product'/>
     </Navbar.Text>
     <Nav>
       <Dropdown alignRight>

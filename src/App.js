@@ -11,10 +11,10 @@ function App() {
     <div className="App">
     <Header />
     <Switch>
-    <Route exact path= "/">
+    <Route exact path= "/" component={Home} >
     <Home />
     </Route>
-    <Route path= "/cart">
+    <Route path= "/cart" component={Cart} >
     <Cart />
     </Route>
     </Switch>
