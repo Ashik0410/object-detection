@@ -13,12 +13,15 @@
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+
 }
 
 .productDesc {
   display: flex;
   justify-content: space-between;
   padding: 5px;
+  overflow: hidden;
+  
 }
 .responsive-img {
 	width: 100%;
