@@ -20,10 +20,15 @@
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  overflow: hidden;
   
 }
 .responsive-img {
 	width: 100%;
 	height: auto;
+}
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .productDesc, .products, .productContainer {
+    width: 100%;
+  }
 }
