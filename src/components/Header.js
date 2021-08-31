@@ -1,4 +1,4 @@
-import {Navbar, Container, FormControl, Dropdown, Nav} from 'react-bootstrap';
+import {Navbar, Container, FormControl} from 'react-bootstrap';
 import { FaShoppingCart } from "react-icons/fa";
 import {Link} from 'react-router-dom';
 import './Header.css';
