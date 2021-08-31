@@ -26,9 +26,10 @@
 	width: 100%;
 	height: auto;
 }
+
 @media only screen and (max-width: 620px) {
   /* For mobile phones: */
-  .productDesc, .products, .productContainer {
+  .productDesc, .products, .productContainer, .cart, .search {
     width: 100%;
   }
 }

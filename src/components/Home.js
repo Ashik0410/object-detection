@@ -3,7 +3,8 @@ import faker from 'faker';
 import FirstPage from './FirstPage'
 import './style.css';
 
-const Home = () => {
+faker.seed(100);
+const Home = ({cart,setCart}) => {
 	const productArray = [...Array(20)].map(() => ({
 		id: faker.datatype.uuid(),
 		name: faker.commerce.productName(),
@@ -11,13 +12,14 @@ const Home = () => {
 		image: faker.image.image(),
 	}))
 
+	
 	const[products] = useState(productArray);
 	
 	return(
 	<div className="productContainer">
 	{
 		products.map((prod) => (
-			<FirstPage prod={prod}/>
+			<FirstPage prod={prod} cart={cart} setCart={setCart} key={prod.id}/>
 
 			))}
 

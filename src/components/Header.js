@@ -2,6 +2,9 @@ import {Navbar, Container, FormControl, Dropdown, Nav} from 'react-bootstrap';
 import { FaShoppingCart } from "react-icons/fa";
 import {Link} from 'react-router-dom';
 import './Header.css';
+import './style.css';
+
+
 const Header = () => {
 	return(
     <div className="header">
@@ -10,10 +13,14 @@ const Header = () => {
     <Navbar.Brand className="main-text">
     <Link to="/"> Shopping Cart </Link>
     </Navbar.Brand>
-    <Navbar.Text className="search">  
+    <Navbar.Brand className="main-text">
+    <FaShoppingCart color="white" fontSize="25px"/>
+    <Link to="/cart"> Cart </Link>
+    </Navbar.Brand>
+    <Navbar.Text className="search" >  
     <FormControl placeholder='search a product'/>
     </Navbar.Text>
-    <Nav>
+    {/*<Nav>
       <Dropdown alignRight>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
   <FaShoppingCart color="white" fontSize="25px"/>
@@ -23,7 +30,7 @@ const Header = () => {
   <span style={{padding :10, width: "100%"}}> Cart is empty </span>
   </Dropdown.Menu>
   </Dropdown>
-    </Nav>
+    </Nav>*/}
     </Container>
     </Navbar>
     </div>
