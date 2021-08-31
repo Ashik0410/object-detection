@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import './Header.css';
 const Header = () => {
 	return(
+    <div className="header">
 		<Navbar bg="dark" variant="dark">
     <Container>
     <Navbar.Brand className="main-text">
@@ -19,12 +20,14 @@ const Header = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu style={{minWidth: 370}}>
-  <span style={{padding :10}}> Cart is empty </span>
+  <span style={{padding :10, width: "100%"}}> Cart is empty </span>
   </Dropdown.Menu>
   </Dropdown>
     </Nav>
     </Container>
     </Navbar>
+    </div>
+
 
 		);
 }
