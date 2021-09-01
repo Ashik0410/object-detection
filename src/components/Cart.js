@@ -1,16 +1,29 @@
+import {useState, useEffect, useContext} from 'react';
 import FirstPage from './FirstPage';
 import './style.css';
+import Cart from '../Context';
 
-const Cart = ({cart,setCart}) => {
+
+const CartPage = () => {
+
+const{cart} = useContext(Cart);
+
+const[total,setTotal] = useState();
+
+useEffect(() => {
+	setTotal(cart.reduce((acc,curr) => acc + Number(curr.price), 0));
+
+},[cart]); 
+
 	return(
 	<div className = "cart">
 	<span style={{fontSize : 30}}> My Cart </span>
 	<br />
-	<span style={{fontSize : 30}}> Total Price : ₹100 </span>
+	<span style={{fontSize : 30}}> Total Price : ₹{total} </span>
 	<div className="productContainer">
 		{
 			cart.map((prod) => (
-				<FirstPage prod={prod} key={prod.key} cart={cart} setCart={setCart} />
+				<FirstPage prod={prod} key={prod.key} />
 				))
 		}
 	</div>
@@ -18,4 +31,4 @@ const Cart = ({cart,setCart}) => {
 	</div>
 	);
 }
-export default Cart;
+export default CartPage;

@@ -1,6 +1,12 @@
 // import './style.css';
-const FirstPage = ({prod,cart,setCart}) => {
-	return(
+import Cart from '../Context';
+import {useContext} from 'react';
+
+const FirstPage = ({prod}) => {
+
+const{cart ,setCart} = useContext(Cart);
+
+  return(
 		<div className="products">
       <img  className = "responsive-img" src={prod.image} alt={prod.name} />
       <div className="productDesc">
@@ -27,4 +33,5 @@ const FirstPage = ({prod,cart,setCart}) => {
 
 		);
 }
+
 export default FirstPage;

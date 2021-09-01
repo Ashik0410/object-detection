@@ -1,11 +1,16 @@
 import {Navbar, Container, FormControl} from 'react-bootstrap';
 import { FaShoppingCart } from "react-icons/fa";
 import {Link} from 'react-router-dom';
+import Cart from '../Context';
+import {useContext} from 'react';
 import './Header.css';
 import './style.css';
 
 
 const Header = () => {
+
+const{cart ,setCart} = useContext(Cart);
+
 	return(
     <div className="header">
 		<Navbar bg="dark" variant="dark">
@@ -15,7 +20,7 @@ const Header = () => {
     </Navbar.Brand>
     <Navbar.Brand className="main-text">
     <FaShoppingCart color="white" fontSize="25px"/>
-    <Link to="/cart"> Cart </Link>
+    <Link to="/cart"> Cart ({cart.length}) </Link>
     </Navbar.Brand>
     <Navbar.Text className="search" >  
     <FormControl placeholder='search a product'/>

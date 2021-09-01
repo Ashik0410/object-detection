@@ -4,7 +4,9 @@ import FirstPage from './FirstPage'
 import './style.css';
 
 faker.seed(100);
-const Home = ({cart,setCart}) => {
+
+const Home = () => {
+
 	const productArray = [...Array(20)].map(() => ({
 		id: faker.datatype.uuid(),
 		name: faker.commerce.productName(),
@@ -19,7 +21,7 @@ const Home = ({cart,setCart}) => {
 	<div className="productContainer">
 	{
 		products.map((prod) => (
-			<FirstPage prod={prod} cart={cart} setCart={setCart} key={prod.id}/>
+			<FirstPage prod={prod} key={prod.id}/>
 
 			))}
 
