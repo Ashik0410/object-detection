@@ -9,7 +9,7 @@ import './style.css';
 
 const Header = () => {
 
-const{cart ,setCart} = useContext(Cart);
+const{cart} = useContext(Cart);
 
 	return(
     <div className="header">
