@@ -50,9 +50,9 @@ function App() {
         const net = await cocossd.load();
         console.log("Handpose model loaded.");
         //  Loop and detect hands
-        setInterval(() => {
-            detect(net);
-        }, 10);
+        // setInterval(() => {
+        //     detect(net);
+        // }, 10);
     };
 
     return (
