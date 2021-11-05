@@ -11,14 +11,7 @@ function App() {
     const canvasRef = useRef(null);
 
     // Main function
-    const runCoco = async () => {
-        const net = await cocossd.load();
-        console.log("Handpose model loaded.");
-        //  Loop and detect hands
-        setInterval(() => {
-            detect(net);
-        }, 10);
-    };
+
 
     useEffect(() => {
         const detect = async (net) => {
@@ -52,6 +45,15 @@ function App() {
         };
         runCoco();
     }, []);
+
+    const runCoco = async () => {
+        const net = await cocossd.load();
+        console.log("Handpose model loaded.");
+        //  Loop and detect hands
+        setInterval(() => {
+            detect(net);
+        }, 10);
+    };
 
     return (
         <div className="App">
