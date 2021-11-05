@@ -1,4 +1,4 @@
-import {useState, useEffect, useContext} from 'react';
+simport {useState, useEffect, useContext} from 'react';
 import FirstPage from './FirstPage';
 import './style.css';
 import Cart from '../Context';

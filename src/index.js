@@ -6,10 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Context from './Context';
 
 ReactDOM.render(
+    <React.StrictMode>
     <Context>
-    <App />
-    </Context>,
-  document.getElementById('root')
+      <App />
+    </Context>
+  </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

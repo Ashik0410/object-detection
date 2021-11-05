@@ -1,19 +1,20 @@
-import {Navbar, Container, FormControl} from 'react-bootstrap';
+import { Navbar, Container, FormControl } from 'react-bootstrap';
 import { FaShoppingCart } from "react-icons/fa";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Cart from '../Context';
-import {useContext} from 'react';
+import { useContext } from 'react';
 import './Header.css';
 import './style.css';
 
 
 const Header = () => {
+    cart
 
-const{cart} = useContext(Cart);
+    const {cart} = useContext(Cart);
 
-	return(
-    <div className="header">
-		<Navbar bg="dark" variant="dark">
+    return (
+        <div className="header">
+    <Navbar bg="dark" variant="dark">
     <Container>
     <Navbar.Brand className="main-text">
     <Link to="/"> Shopping Cart </Link>
@@ -25,7 +26,7 @@ const{cart} = useContext(Cart);
     <Navbar.Text className="search" >  
     <FormControl placeholder='search a product'/>
     </Navbar.Text>
-    {/*<Nav>
+    { /*<Nav>
       <Dropdown alignRight>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
   <FaShoppingCart color="white" fontSize="25px"/>
@@ -35,12 +36,12 @@ const{cart} = useContext(Cart);
   <span style={{padding :10, width: "100%"}}> Cart is empty </span>
   </Dropdown.Menu>
   </Dropdown>
-    </Nav>*/}
+    </Nav>*/ }
     </Container>
     </Navbar>
     </div>
 
 
-		);
+    );
 }
 export default Header;
